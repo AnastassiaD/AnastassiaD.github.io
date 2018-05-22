@@ -1,6 +1,8 @@
+import sample.Main;
+
 public class Game {
 
-    private int countOfRound = 0;
+
     private String userChoice;
     private String pcChoice;
 
@@ -17,47 +19,30 @@ public class Game {
         this.pcChoice = pcChoice;
     }
 
-    public String compareChoices(Player player1, Player player2){
-        countOfRound++;
-        String result="";
+    public String compareChoices(Main.Player player1, Main.Computer computer1) {
+
+        String result = "";
         int choice1 = player1.getPlayerChoice();
-        int choice2 = player2.getPlayerChoice();
-        System.out.println(choiceForPrint(choice1,player1.getName()));
-        System.out.println(choiceForPrint(choice2,player2.getName()));
+        int choice2 = computer1.getPlayerChoice();
 
         if (choice1 == choice2) {
-            result = "It is a tie!\n";
-        }else if ((choice1 == 1 && choice2 == 2) || (choice1 == 2 && choice2 == 3) || (choice1 == 3 && choice2 == 1)) {
-            player1.playerPoints = player1.playerPoints + 10;
-            result = "The " + player1.getName() + " is winner!\n";
-        }else if ((choice1 == 1 && choice2 == 3) || (choice1 == 2 && choice2 == 1) || (choice1 == 3 && choice2 == 2)) {
-            player2.playerPoints = player2.playerPoints + 10;
-            result = "The " + player2.getName() + " is winner!\n";
-        }return result;
-    }
 
-    public String comparePoints(Player player1, Player player2){
-        String result;
-        if (player1.playerPoints==player2.playerPoints) {
-            result = "IT IS A TIE!\n";
-        } else if (player2.playerPoints<player1.playerPoints) {
-            result = player2.getName()+" - YOU LOOSING SO FAR! :(\n";
-        } else {result = player2.getName() + " - YOU ARE WINNING SO FAR! :)\n";}
+            result = "Computer choice was - " + choice2 + "\n" + "Your choice was - " + choice1 + "\n" + " - so it is a tie!\n";
+        } else if ((choice1 == 1 && choice2 == 2) || (choice1 == 2 && choice2 == 3) || (choice1 == 3 && choice2 == 1)) {
+
+            result = "Computer choice was - " + choice2 + "\n" + "Your choice was - " + choice1 + "\n" + " - so " + player1.getName() + " is winner!\n";
+        } else if ((choice1 == 1 && choice2 == 3) || (choice1 == 2 && choice2 == 1) || (choice1 == 3 && choice2 == 2)) {
+
+            result = "Computer choice was - " + choice2 + "\n" + "Your choice was - " + choice1 + "\n" + " - so computer is winner!\n";
+        }
         return result;
     }
 
-    public String choiceForPrint(int a,String b){
 
-        String res;
-        if (a==1){ res="STONE.";
-        }
-        else if (a==2){ res="SCISSORS.";
-        }
-        else{ res="PAPER.";
-        }
-        String result= b + "\'s choice: " + res;
-        return result;
-    }
+
+
 
 }
+
+
 
