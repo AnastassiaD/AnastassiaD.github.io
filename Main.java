@@ -537,14 +537,14 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) throws Exception, FileNotFoundException {
-        //eta muzyka budet igrat
+        //eta muzyka budet igrat poka user ne nazhmjot "exit"
 
             try {
                 String muz = "muzyka2.mp3";
                 Media sound = new Media(new File("muzyka2.mp3").toURI().toString());
-                MediaPlayer mediaPlayer = new MediaPlayer(sound);
-                mediaPlayer.play();
-
+                MediaPlayer mediaPlayer2 = new MediaPlayer(sound);
+                mediaPlayer2.setCycleCount(MediaPlayer.INDEFINITE);
+                mediaPlayer2.play();
                 launch(args);
             } catch (Exception e) {
 
