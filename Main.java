@@ -540,8 +540,8 @@ public class Main extends Application {
         //eta muzyka budet igrat poka user ne nazhmjot "exit"
 
             try {
-                String muz = "muzyka2.mp3";
-                Media sound = new Media(new File("muzyka2.mp3").toURI().toString());
+                String muz = "muzyka3.mp3";
+                Media sound = new Media(new File("muzyka3.mp3").toURI().toString());
                 MediaPlayer mediaPlayer2 = new MediaPlayer(sound);
                 mediaPlayer2.setCycleCount(MediaPlayer.INDEFINITE);
                 mediaPlayer2.play();
