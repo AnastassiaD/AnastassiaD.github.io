@@ -1,0 +1,10 @@
+Rules of the game:
+
+You choose one of the 3 options: stone, scissors or paper.
+If you want to select "stone", enter the number 1, if you select "scissors" enter number 2,
+if your choice is "paper", enter number 3.
+Further choice makes the computer and results are compared.
+
+The stone defeats the scissors (the stone blunts or breaks the scissors).
+Paper wins the stone (paper covers the stone).
+Scissors win paper (scissors cut paper).
