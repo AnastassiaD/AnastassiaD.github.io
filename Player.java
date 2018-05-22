@@ -1,6 +1,6 @@
 public class Player {
 
-    public int playerPoints = 0;
+
     public int playerChoice;
     public String name;
 
@@ -18,13 +18,6 @@ public class Player {
         return name;
     }
 
-    public void setPlayerPoints(int playerPoints) {
-        this.playerPoints = playerPoints;
-    }
-
-    public int getPlayerPoints() {
-        return playerPoints;
-    }
 
     public int getPlayerChoice() {
         return playerChoice;
@@ -34,4 +27,5 @@ public class Player {
         this.playerChoice = playerChoice;
     }
 }
+
 
